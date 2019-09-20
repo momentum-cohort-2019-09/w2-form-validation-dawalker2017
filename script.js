@@ -1,3 +1,5 @@
+//----------------------------------------------------------------------------//
+
 function query(selector) { //assigned the selector of 'query' to a function.//
     return document.querySelector(selector)
 }
@@ -7,6 +9,8 @@ function queryAll(selector) { //assigned the selector of 'queryAll' to a functio
 }
 
 //----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+
 //BEGIN NAME INPUT//
 
 query('#parking-form').addEventListener('submit', function(event) {
@@ -31,29 +35,112 @@ query('#parking-form').addEventListener('submit', function(event) {
 })
 
 //END NAME INPUT//
-//----------------------------------------------------------------------------//
-
-//insert Car Input here//
-
-//insert DateParking Input here//
 
 //----------------------------------------------------------------------------//
-//BEGIN NUMBER OF DAYS//
-
-query('#parking-form').addEventListener('submit', function(event) {
-
-    let daysField = query('#days')
-    let days = daysField.value.trim()
-
-    if (!days) {
-        daysField.parentNode.classList.remove('input-valid')
-        daysField.parentNode.classList.add('input-invalid')
-
-    } else {
-        daysField.parentNode.classList.remove('input-invalid')
-        daysField.parentNode.classList.add('input-valid')
-    }
-})
-
-//END NUMBER OF DAYS INPUT//
 //----------------------------------------------------------------------------//
+
+//BEGIN CAR INPUT//
+
+query('#parking-form').addEventListener('submit', function() {
+
+            let yearField = query()
+
+        }
+
+        //END CAR INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
+
+
+        //BEGIN DATE PARKING INPUT//
+
+        //END DATE PARKING INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
+
+        //BEGIN NUMBER OF DAYS//
+
+        query('#parking-form').addEventListener('submit', function(event) {
+
+            let daysField = query('#days')
+            let daysText = daysField.value.trim()
+
+            if (!daysText) {
+                daysField.parentNode.classList.remove('input-valid')
+                daysField.parentNode.classList.add('input-invalid')
+
+            } else {
+                daysField.parentNode.classList.remove('input-invalid')
+                daysField.parentNode.classList.add('input-valid')
+            }
+        })
+
+        //END NUMBER OF DAYS INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
+
+        //BEGIN CREDIT CARD INPUT//
+
+        query('#parking-form').addEventListener('submit', function(event) {
+
+            let cardField = query('#credit-card')
+            let cardText = cardField.value.trim()
+
+            if (!cardText) {
+                cardField.parentNode.classList.remove('input-valid')
+                cardField.parentNode.classList.add('input-invalid')
+            } else {
+                cardField.parentNode.classList.remove('input-invalid')
+                cardField.parentNode.classList.add('input-valid')
+            }
+        })
+
+        //END CREDIT CARD INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
+
+        //BEGIN CVV INPUT//
+
+        query('#parking-form').addEventListener('submit', function(event) {
+
+            let cvvField = query('#cvv')
+            let cvvText = cvvField.value.trim()
+
+            if (!cvvText) {
+                cvvField.parentNode.classList.remove('input-valid')
+                cvvField.parentNode.classList.add('input-invalid')
+            } else {
+                cvvField.parentNode.classList.remove('input-invalid')
+                cvvField.parentNode.classList.add('input-valid')
+            }
+        })
+
+        //END CVV INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
+
+        //BEGIN EXPIRATION INPUT//
+
+        query('#parking-form').addEventListener('submit', function() {
+
+            let expField = query('#expiration')
+            let expText = expField.value.trim()
+
+            if (!expText) {
+                expField.parentNode.classList.remove('input-valid')
+                expField.parentNode.classList.add('input-invalid')
+            } else {
+                expField.parentNode.classList.remove('input-invalid')
+                expField.parentNode.classList.add('input-valid')
+            }
+        })
+
+        //END EXPIRATION INPUT//
+
+        //----------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------//
