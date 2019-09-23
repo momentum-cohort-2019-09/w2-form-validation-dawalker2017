@@ -18,11 +18,14 @@ function markValid(field) {
         // So instead of validating Name Input only, it went to everything.**
 }
 
+
+
 function markInvalid(field, errorMessage) {
     // created a function that, when seen as 'invalid',
     // removes the 'valid' status and adds 'invalid' status.
     field.classList.remove('input-valid')
     field.classList.add('input-invalid')
+        // ** no parentNode **
 
     if (errorMessage) {
         // "if" there are error messages...
@@ -42,17 +45,17 @@ function markInvalid(field, errorMessage) {
 function errorClear() {
     // Created a function for clearing error messages.
     let errorWipe = queryAll('.text-danger')
-        // 'errors' is now set to the Boot-strap default of 'red'.
+        // 'errors' is now set to the Boot-strap default of 'red' because '.text-danger' is red.
     for (let i = 0; i < errorWipe.length; i++) {
         errorWipe[i].remove()
     } // Created a for-loop in which, starting at 0, runs through the 
     // selection until all of 'errors_value' is removed.
 }
 
-//---------------------------------------------------------------------------------//
-
 
 //----------------------------------------------------------------------------//NAME_INPUT//
+
+
 query('#parking-form').addEventListener('submit', function() {
     event.preventDefault()
         // Creating the function that adds and Event Listener of 'submit' to 
@@ -61,7 +64,6 @@ query('#parking-form').addEventListener('submit', function() {
 
     errorClear()
         // Recalling the function to clear all the error messages.
-
 
     let nameField = query('#name-field')
     let name = query('#name').value
@@ -74,7 +76,7 @@ query('#parking-form').addEventListener('submit', function() {
     }
 
 
-    //----------------------------------------------------------------------------//CAR_INPUT//in_progress...
+    //----------------------------------------------------------------------------//CAR_INPUT//
 
     let carField = query('#car-field')
     let carYear = query('#car-year').value
